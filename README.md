@@ -8,6 +8,9 @@
 
 - Testing
   - Mocha
+    - Assertions
+    - Async Await
+    - Hooks
   - Chai
   - Chai HTTP
 
@@ -74,6 +77,20 @@ $ npm test
 
 
 
+---
+
+
+
+### Assertions
+
+For assertions we will using chai.js
+
+
+
+---
+
+
+
 ### Async Await
 
 Here is an example using Async Await :
@@ -89,6 +106,38 @@ describe('#find()', function () {
     const users = await db.find({type: 'User'});
     users.should.have.length(3);
   });
+});
+```
+
+
+
+---
+
+
+
+### Hooks
+
+For helping the development mocha provide hooks :
+
+```javascript
+describe('hooks', function () {
+  before(function () {
+    // runs once before the first test in this block
+  });
+
+  after(function () {
+    // runs once after the last test in this block
+  });
+
+  beforeEach(function () {
+    // runs before each test in this block
+  });
+
+  afterEach(function () {
+    // runs after each test in this block
+  });
+
+  // test cases
 });
 ```
 
